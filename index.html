@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+   header {background-color:tomato;text-align:center;font-size:20px;color:white;}
+   header h2 {padding:5px;}
+   section {}
+   nav ul {list-style-type:none;backgound-color:white;border-style:double;border-solid:2px;border-color:tomato;}
+   a {text-decoration:none;}
+   button {padding:12px;color:white;background-color:tomato;}
+   input {padding:12px;color:tomato;}
+   nav ul li a {color:red;font-size:24px;}
+   nav ul li {padding:12px;border-bottom:1px solid tomato;}
+
+  </style>
+ </head>
+
+ <body>
+ <script src="register.js"></script>
+ <script src="login.js"></script>
+  <header>
+   <h2>nhothicam.github.io</h2>
+  </header>
+
+  <section>
+   <nav>
+    <ul>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="products.html">Products</a></li>
+     <li><a href="">Contacts</a></li>
+    </ul>
+   </nav>
+   
+   <article>
+   
+    <div>
+     <h1>Login</h1>
+     <input type="text" placeholder="Username" id="username">
+     <input type="password" placeholder="Password" id="password">
+     <br><button onclick="login()">Login</button>
+    </div>
+    <div>
+     <h1>Register</h1>
+     <input type="text" placeholder="Username" id="rgusername">
+     <input type="password" placeholder="Password" id="rgpassword">
+     <br><button onclick="register()">Register</button>
+    </div>
+    <div>
+     <h1>Register with</h1>
+     <input type="text"placeholder="Email" id="rgEmailWithEmail">
+     <input type="password" placeholder="Password" id="rgPasswordWithEmail">
+     <br><button onclick="registerWithEmail()">Email</button>
+     <button onclick="loginWithGoogle()">Google</button>
+    </div>
+  
+   </article>
+  </section>
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC9wIZxQ1l26lpmB0D8TO81xC8yLnsOW_k",
+    authDomain: "nhothicam-fa176.firebaseapp.com",
+    databaseURL: "https://nhothicam-fa176.firebaseio.com",
+    projectId: "nhothicam-fa176",
+    storageBucket: "nhothicam-fa176.appspot.com",
+    messagingSenderId: "1050806774649",
+    appId: "1:1050806774649:web:c5a88bda57a2d02a461da8",
+    measurementId: "G-E6DW4KM5WX"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+ </body>
+
+ <footer>
+ </footer>
+<html>
