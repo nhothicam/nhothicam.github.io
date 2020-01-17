@@ -1,0 +1,77 @@
+#listview{
+     background-color:yellow;
+     width:100%;
+     height:auto;
+     }
+.item{
+     margin-left:5px;
+     margin-bottom:8px;
+     text-align:center;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+     float:left;
+     width:48%;}
+.item img{
+     margin-top:-30px;
+     width:100%;
+     height:auto;
+     z-index:0}
+.title{
+  clear:both;
+  padding:2px;
+}
+.itemchild{
+  float:right;
+  margin-right:10px;
+  text-align:center;
+}
+.price{
+  color:orange;
+  font-size:16px;
+}
+.love{
+  clear:both;
+  margin-right:10px;
+  float:left;
+  font-size:12px;
+  color:gray;
+}
+.rating{
+  margin-right:5px;
+  float:left;
+  font-size:12px;
+  color:gray;
+}
+.count{
+  float:left;
+  font-size:12px;
+  color:gray;
+}
+.location{
+  clear:both;
+  margin-right:10px;
+  float:right;
+  font-size:12px;
+  color:gray;
+}
+.noteleft{
+  position:relative;
+  float:left;
+  left:0px;
+  top:10px;
+  background-color:red;
+  padding:3px;
+  color:white;
+  font-size:10px;
+  z-index:1;
+}
+.noteright{
+  position:relative;
+  float:right;
+  right:0px;
+  top:10px;
+  padding:5px;
+  background-color:yellow;
+  z-index:1;
+}
+
+
