@@ -1,11 +1,4 @@
 function loadlist(){
-                   //var model1={link:"https://google.com",noteleft:"&#9734 Hot",noteright:"-0%",srcUrl:"https://cf.shopee.vn/file/23a1a71da7703209468a3d8e2fea36ab",title:"Áo thun cổ tròn",price:"200.000",selled:"12",location:"Hà Nội"};
-                   //var model2={link:"https://google.com",noteleft:"&#9734 Hot",noteright:"-12%",srcUrl:"https://cf.shopee.vn/file/18451e229297a7713a33b39be10de4ab",title:"Đầm công chúa xòe Quảng Châu",price:"289.000",selled:"8",location:"Hà Nội"};
-                   //var model3={link:"https://google.com",noteleft:"&#9734 Hot",noteright:"-18%",srcUrl:"https://cf.shopee.vn/file/fba1ddc9129295691204c1c7ffe56943",title:"Đầm voan",price:"350.000",selled:"21",location:"Hồ Chí Minh"};
-                   //var model4={link:"https://google.com",noteleft:"&#9734 New",noteright:"-39%",srcUrl:"https://cf.shopee.vn/file/b9a14868241f5834613c2171d1c01eeb",title:"Váy nữ ngắn xòe",price:"200.000",selled:"10",location:"Hà Nội"};
-                   //var model5={link:"https://google.com",noteleft:"&#9734 New",noteright:"-8%",srcUrl:"https://cf.shopee.vn/file/95949eac6cedb7d40bd8c18b7a8e7556",title:"Quần short jean nam co giãn đẹp",price:"198.000",selled:"12",location:"Hồ Chí Minh"};
-                   //var model6={link:"https://google.com",noteleft:"&#9734 Hot",noteright:"-8%",srcUrl:"https://cf.shopee.vn/file/e016686beedeaf05da0b466f74758973",title:"Combo bé gái",price:"280.000",selled:"39",location:"Hà Nội"};
-                   //var arr=[model1,model2,model3,model4,model5,model6];
                    var item1=new Product("cloth_1","Áo thun cổ tròn","Áo thun cổ tròn","250.000","12/1/2019","123","Trang phục nữ ","Áo","shop Be","-0%","Hà Nội","https://cf.shopee.vn/file/23a1a71da7703209468a3d8e2fea36ab");
                    var item2=new Product("cloth_2","Đầm công chúa xòe Quảng Châu","Đầm công chúa xòe Quảng Châu","280.000","12/1/2019","121","Trang phục nữ nữ","Áo","shop Be","-12%","Hà Nội","https://cf.shopee.vn/file/18451e229297a7713a33b39be10de4ab");
                    var item3=new Product("cloth_3","Đầm voan","Đầm voan","300.000","12/1/2019","20","Trang phục nữ","Áo","shop Be","-19%","Hà Nội","https://cf.shopee.vn/file/fba1ddc9129295691204c1c7ffe56943");
@@ -57,6 +50,7 @@ function list(link,noteleft,noteright,srcUrl,title,price,count,location){
                var itemChild6_3=document.createElement("div");
                itemChild6_3.className="count";
                itemChild6_3.innerHTML="còn "+count;
+               if(itemChild6_3.length>5){itemChild6_3.innerHTML="còn "+count.slice(0,5)+"...";}
                itemChild6.appendChild(itemChild6_3);
                item.appendChild(itemChild6);             
                var itemChild7=document.createElement("div");
