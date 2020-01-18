@@ -1,10 +1,11 @@
-function Product(id,name,detail,price,date,count,bigTag,smallTag,idCompany,sellStatus,location,srcImg){
+function Product(id,name,detail,price,date,beforeCount,afterCount,bigTag,smallTag,idCompany,sellStatus,location,srcImg){
   this.id=id;
   this.name=name;
   this.detail=detail;
   this.price=price;
   this.date=date;
-  this.count=count;
+  this.beforeCount=beforeCount;
+  this.afterCount=afterCount;
   this.bigTag=bigTag;
   this.smallTag=smallTag;
   this.idCompany=idCompany;
@@ -89,12 +90,12 @@ function addCompanyTag(companyTag){
   db.ref("companyTag/"+bigTag+smallTag+idCompany).set({bigTag:bigTag,smallTag:smallTag,idCompany:idCompany,srcImg:srcImg});
 }
 function demo(){
-                   var item1=new Product("cloth_1","Áo thun cổ tròn","Áo thun cổ tròn","250.000","12/1/2019","123","Trang phục nữ ","Áo","shop Be","-0%","Hà Nội","https://cf.shopee.vn/file/23a1a71da7703209468a3d8e2fea36ab");
-                   var item2=new Product("cloth_2","Đầm công chúa xòe Quảng Châu","Đầm công chúa xòe Quảng Châu","280.000","12/1/2019","121","Trang phục nữ nữ","Áo","shop Be","-12%","Hà Nội","https://cf.shopee.vn/file/18451e229297a7713a33b39be10de4ab");
-                   var item3=new Product("cloth_3","Đầm voan","Đầm voan","300.000","12/1/2019","20","Trang phục nữ","Áo","shop Be","-19%","Hà Nội","https://cf.shopee.vn/file/fba1ddc9129295691204c1c7ffe56943");
-                   var item4=new Product("cloth_4","Váy nữ ngắn xòe","Váy nữ ngắn xòe","350.000","12/1/2019","130","Trang phục nam","Quần","shop Be","-39%","Hà Nội","https://cf.shopee.vn/file/b9a14868241f5834613c2171d1c01eeb");
-                   var item5=new Product("cloth_5","Quần short jean nam co giãn đẹp","Quần short jean nam co giãn đẹp","289.000","12/1/2019","120","Trang phục nam","Quần","shop Be","-8%","Hà Nội","https://cf.shopee.vn/file/95949eac6cedb7d40bd8c18b7a8e7556");
-                   var item6=new Product("cloth_6","Combo bé gái","Combo bé gái","290.000","12/1/2019","12","Trang phục nữ","Áo","shop Be","-12%","Hà Nội","https://cf.shopee.vn/file/e016686beedeaf05da0b466f74758973");
+                   var item1=new Product("cloth_1","Áo thun cổ tròn","Áo thun cổ tròn","250.000","12/1/2019","123","18","Trang phục nữ","Áo","shop Be","-0%","Hà Nội","https://cf.shopee.vn/file/23a1a71da7703209468a3d8e2fea36ab");
+                   var item2=new Product("cloth_2","Đầm công chúa xòe Quảng Châu","Đầm công chúa xòe Quảng Châu","280.000","12/1/2019","124","121","Trang phục nữ nữ","Áo","shop Be","-12%","Hà Nội","https://cf.shopee.vn/file/18451e229297a7713a33b39be10de4ab");
+                   var item3=new Product("cloth_3","Đầm voan","Đầm voan","300.000","12/1/2019","560","20","Trang phục nữ","Áo","shop Be","-19%","Hà Nội","https://cf.shopee.vn/file/fba1ddc9129295691204c1c7ffe56943");
+                   var item4=new Product("cloth_4","Váy nữ ngắn xòe","Váy nữ ngắn xòe","350.000","12/1/2019","489","130","Trang phục nam","Quần","shop Be","-39%","Hà Nội","https://cf.shopee.vn/file/b9a14868241f5834613c2171d1c01eeb");
+                   var item5=new Product("cloth_5","Quần short jean nam co giãn đẹp","Quần short jean nam co giãn đẹp","289.000","12/1/2019","590","120","Trang phục nam","Quần","shop Be","-8%","Hà Nội","https://cf.shopee.vn/file/95949eac6cedb7d40bd8c18b7a8e7556");
+                   var item6=new Product("cloth_6","Combo bé gái","Combo bé gái","290.000","12/1/2019","45","12","Trang phục nữ","Áo","shop Be","-12%","Hà Nội","https://cf.shopee.vn/file/e016686beedeaf05da0b466f74758973");
                    var bigTag1=new BigTag("Thời trang nam","","https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn");
                    var bigTag2=new BigTag("Điện thoại và phụ kiện","","https://cf.shopee.vn/file/31234a27876fb89cd522d7e3db1ba5ca_tn");
                    var bigTag3=new BigTag("Thiết bị điện tử","","https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn");

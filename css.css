@@ -22,7 +22,7 @@
   color:black;
 }
 .itemchild{
-  float:right;
+  width:100%;
   text-align:center;
 }
 .price{
@@ -30,15 +30,15 @@
   font-size:16px;
 }
 .love{
-  clear:both;
-  margin-right:10px;
+  
+  margin-left:5px;
   float:left;
   font-size:12px;
   color:gray;
 }
 .rating{
   margin-right:5px;
-  float:left;
+  float:right;
   font-size:12px;
   color:gray;
 }
