@@ -18,6 +18,8 @@
 .title{
   clear:both;
   padding:2px;
+  font-size:15px;
+  color:gray;
 }
 .itemchild{
   float:right;
