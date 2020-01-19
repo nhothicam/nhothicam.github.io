@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initail-scale=1">
+<title>Add New Product</title>
+<script src="database.js"></script>
+</head>
+<body>
+<input type="text" placeholder="Id sản phẩm" id="id">
+<input type="text" placeholder="Tên sản phẩm" id="name">
+<input type="text" placeholder="Mô tả sản phẩm" id="detail">
+<input type="text" placeholder="Giá sản phẩm" id="price">
+<input type="text" placeholder="Ngày nhập hàng" id="date">
+<input type="text" placeholder="Số lượng ban đầu" id="beforeCount">
+<input type="text" placeholder="Số lượng còn lại sau khi bán" id="afterCount">
+<input type="text" placeholder="Danh mục lớn" id="bigTag">
+<input type="text" placeholder="Danh mục con" id="smallTag">
+<input type="text" placeholder="Id công ty" id="idCompany">
+<input type="text" placeholder="Giảm giá bao nhiêu %" id="sellStatus">
+<input type="text" placeholder="Địa chỉ" id="location">
+<input type="text" placeholder="Đường dẫn hình ảnh" id="srcImg">
+<br><button onclick="addProductFromForm()">Add</button>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCANBE3MU4FXSYH_G4hxuwK-4d-Kzut6pU",
+    authDomain: "shop-htcn.firebaseapp.com",
+    databaseURL: "https://shop-htcn.firebaseio.com",
+    projectId: "shop-htcn",
+    storageBucket: "shop-htcn.appspot.com",
+    messagingSenderId: "531910308873",
+    appId: "1:531910308873:web:947a2d2c9da9342097b4d8",
+    measurementId: "G-9326827HB2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+</html>

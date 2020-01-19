@@ -44,7 +44,8 @@ function addProduct(product){
   var detail=product.detail;
   var price=product.price;
   var date=product.date;
-  var count=product.count;
+  var beforeCount=product.beforeCount;
+  var afterCount=product.afterCount;
   var bigTag=product.bigTag;
   var smallTag=product.smallTag;
   var idCompany=product.idCompany;
@@ -52,7 +53,7 @@ function addProduct(product){
   var location=product.location;
   var srcImg=product.srcImg;
   var db=firebase.database();
-  db.ref("product/"+id).set({id:id,name:name,detail:detail,price:price,date:date,count:count,bigTag:bigTag,smallTag:smallTag,idCompany:idCompany,sellStatus:sellStatus,location:location,srcImg:srcImg});
+  db.ref("product/"+id).set({id:id,name:name,detail:detail,price:price,date:date,beforeCount:beforeCount,afterCount:afterCount,bigTag:bigTag,smallTag:smallTag,idCompany:idCompany,sellStatus:sellStatus,location:location,srcImg:srcImg});
 }
 function addBigTag(bigTag){
   var tag=bigTag.tag;
@@ -89,6 +90,29 @@ function addCompanyTag(companyTag){
   var db=firebase.database();
   db.ref("companyTag/"+bigTag+smallTag+idCompany).set({bigTag:bigTag,smallTag:smallTag,idCompany:idCompany,srcImg:srcImg});
 }
+function getAllProduct(){
+var waitText=document.createElement("div");
+var waitDiv=document.getElementById("listview");
+waitDiv.appendChild(waitText);
+var arrs=[];
+if(arrs.length<1){waitText.innerHTML="Loading...";}else{waitText.innerHTML="";}
+var database=firebase.database();
+var productRef=database.ref("product");
+productRef.on("value",function(snapshot){
+snapshot.forEach(function(childSnapshot){
+var product=childSnapshot.val();
+arrs.push(product);
+//list("listview",product.id,"yêu thích",product.sellStatus,product.srcImg,product.name,product.price,product.afterCount,product.location);
+loadProductToList("listview",product);
+});
+
+//load to html
+if(arrs.length<1){waitText.innerHTML="Loading...";}else{waitText.innerHTML="";}
+});
+}
+function getAllByBigTag(){}
+function getAllBySmallTag(){}
+function getAllByCompany(){}
 function demo(){
                    var item1=new Product("cloth_1","Áo thun cổ tròn","Áo thun cổ tròn","250.000","12/1/2019","123","18","Trang phục nữ","Áo","shop Be","-0%","Hà Nội","https://cf.shopee.vn/file/23a1a71da7703209468a3d8e2fea36ab");
                    var item2=new Product("cloth_2","Đầm công chúa xòe Quảng Châu","Đầm công chúa xòe Quảng Châu","280.000","12/1/2019","124","121","Trang phục nữ nữ","Áo","shop Be","-12%","Hà Nội","https://cf.shopee.vn/file/18451e229297a7713a33b39be10de4ab");
@@ -333,5 +357,30 @@ var bigTagArr=[bigTag1,bigTag2,bigTag3,bigTag4,bigTag5,bigTag6,bigTag7,bigTag8,b
 var smallTagArr=[smallTag1,smallTag2,smallTag3,smallTag4,smallTag5,smallTag6,smallTag7,smallTag8,smallTag9,smallTag10,smallTag11,smallTag12,smallTag13,smallTag14,smallTag15,smallTag16,smallTag17,smallTag18,smallTag19,smallTag20,smallTag21,smallTag22,smallTag23,smallTag24,smallTag25,smallTag26,smallTag27,smallTag28,smallTag29,smallTag30,smallTag31,smallTag32,smallTag33,smallTag34,smallTag35,smallTag36,smallTag37,smallTag38,smallTag39,smallTag40,smallTag41,smallTag42,smallTag43,smallTag44,smallTag45,smallTag46,smallTag47,smallTag48,smallTag49,smallTag50,smallTag51,smallTag52,smallTag53,smallTag54,smallTag55,smallTag56,smallTag57,smallTag58,smallTag59,smallTag60,smallTag61,smallTag62,smallTag63,smallTag64,smallTag65,smallTag66,smallTag67,smallTag68,smallTag69,smallTag70,smallTag71,smallTag72,smallTag73,smallTag74,smallTag75,smallTag76,smallTag77,smallTag78,smallTag79,smallTag80,smallTag81,smallTag82,smallTag83,smallTag84,smallTag85,smallTag86,smallTag87,smallTag88,smallTag89,smallTag90,smallTag91,smallTag92,smallTag93,smallTag94,smallTag95,smallTag96,smallTag97,smallTag98,smallTag99,smallTag100,smallTag101,smallTag102,smallTag103,smallTag104,smallTag105,smallTag106,smallTag107,smallTag108,smallTag109,smallTag110,smallTag111,smallTag112,smallTag113,smallTag114,smallTag115,smallTag116,smallTag117,smallTag118,smallTag119,smallTag120,smallTag121,smallTag122,smallTag123,smallTag124,smallTag125,smallTag126,smallTag127,smallTag128,smallTag129,smallTag130,smallTag131,smallTag132,smallTag133,smallTag134,smallTag135,smallTag136,smallTag137,smallTag138,smallTag139,smallTag140,smallTag141,smallTag142,smallTag143,smallTag144,smallTag145,smallTag146,smallTag147,smallTag148,smallTag149,smallTag150,smallTag151,smallTag152,smallTag153,smallTag154,smallTag155,smallTag156,smallTag157,smallTag158,smallTag159,smallTag160,smallTag161,smallTag162,smallTag163,smallTag164,smallTag165,smallTag166,smallTag167,smallTag168,smallTag169,smallTag170,smallTag171,smallTag172,smallTag173,smallTag174,smallTag175,smallTag176,smallTag177,smallTag178,smallTag179,smallTag180,smallTag181,smallTag182,smallTag183,smallTag184,smallTag185,smallTag186,smallTag187,smallTag188,smallTag189,smallTag190,smallTag191,smallTag192,smallTag193,smallTag194,smallTag195,smallTag196,smallTag197,smallTag198,smallTag199,smallTag200,smallTag201,smallTag202,smallTag203,smallTag204,smallTag205,smallTag206];                  
 for(i=0;i<bigTagArr.length;i++){addBigTag(bigTagArr[i]);}
 for(j=0;j<smallTagArr.length;j++){addSmallTag(smallTagArr[j]);}
-alert("added");    
+alert(getAllProduct().length);    
  }
+function addProductFromForm(){
+
+var id=document.getElementById("id").value;
+var name=document.getElementById("name").value;
+var detail=document.getElementById("detail").value;
+var price=document.getElementById("price").value;
+var date=document.getElementById("date").value;
+var beforeCount=document.getElementById("beforeCount").value;
+var afterCount=document.getElementById("afterCount").value;
+var bigTag=document.getElementById("bigTag").value;
+var smallTag=document.getElementById("smallTag").value;
+var idCompany=document.getElementById("idCompany").value;
+var sellStatus=document.getElementById("sellStatus").value;
+var location=document.getElementById("location").value;
+var srcImg=document.getElementById("srcImg").value;
+var product=new Product(id,name,detail,price,date,beforeCount,afterCount,bigTag,smallTag,idCompany,sellStatus,location,srcImg);
+addProduct(product);
+//var db=firebase.database();
+//db.ref("product/"+id).set({id:id,name:name,detail:detail,price:price,date:date,count:count,bigTag:bigTag,smallTag:smallTag,idCompany:idCompany,sellStatus:sellStatus,location:location,srcImg:srcImg});
+
+//alert(product.id+product.name+detail+price+date+beforeCount+afterCount+bigTag+smallTag+idCompany+sellStatus+location+srcImg);
+
+alert("success");
+}
+

@@ -17,9 +17,9 @@
      z-index:0}
 .title{
   clear:both;
-  padding:2px;
   font-size:12px;
   color:black;
+  text-align:left;
 }
 .itemchild{
   width:100%;
