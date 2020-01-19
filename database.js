@@ -94,20 +94,22 @@ function getAllProduct(){
 var waitText=document.createElement("div");
 var waitDiv=document.getElementById("listview");
 waitDiv.appendChild(waitText);
-var arrs=[];
-if(arrs.length<1){waitText.innerHTML="Loading...";}else{waitText.innerHTML="";}
+//var arrs=[];
+var w=true;
+if(w){waitText.innerHTML="Loading...";}else{waitText.innerHTML="";}
 var database=firebase.database();
 var productRef=database.ref("product");
 productRef.on("value",function(snapshot){
 snapshot.forEach(function(childSnapshot){
 var product=childSnapshot.val();
-arrs.push(product);
+w=false;
+//arrs.push(product);
 //list("listview",product.id,"yêu thích",product.sellStatus,product.srcImg,product.name,product.price,product.afterCount,product.location);
 loadProductToList("listview",product);
 });
 
 //load to html
-if(arrs.length<1){waitText.innerHTML="Loading...";}else{waitText.innerHTML="";}
+if(w=false){waitText.innerHTML="Loading...";}else{waitText.innerHTML="";}
 });
 }
 function getAllByBigTag(){}
