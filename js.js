@@ -1,3 +1,10 @@
+function detectmob(){
+if(window.innerWidth<=800&&window.innerHeight<=600){
+document.location="mobile/index.html";
+}else{
+document.location="desktop/index.html";
+}
+}
 function demo1(){
 alert("");
 }
@@ -17,10 +24,14 @@ var p=document.createElement("div");
 p.className="tagtwoname";
 p.innerHTML=name;
 div.appendChild(p);
+var a=document.createElement("a");
+a.href="index.html";
+a.appendChild(div);
 var tag2=document.getElementById("taglistview");
-tag2.appendChild(div);
+tag2.appendChild(a);
 }
 function slideshow(){
+var slide0="slide0.jpeg";
 var slide1={"link":"link","srcimg":"https://cf.shopee.vn/file/4d04f53b4eaec9259ec61bfffe3ae93f_xhdpi"};
 var slide2={"link":"link","srcimg":"https://cf.shopee.vn/file/6747d13d79ee3f0a37f09f937416eb74_xhdpi"};
 var slide3={"link":"link","srcimg":"https://cf.shopee.vn/file/713b65f78eea41b2651eda3ca7d7f597_xhdpi"};
@@ -34,7 +45,7 @@ slideImg.className="imgSlide";
 var demo=document.createElement("img");
 demo.src=arr[arr.length-1].srcimg;
 var slideDiv=document.getElementById("slideshow");
-slideImg.src=arr[indexSlide].srcimg;
+slideImg.src=slide0;
 demo.style.opacity=0;
 slideDiv.appendChild(slideImg);
 slideDiv.appendChild(demo);
