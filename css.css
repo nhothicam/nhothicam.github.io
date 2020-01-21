@@ -1,59 +1,141 @@
+body{
+zoom:1;
+}
+.imgBanner{
+width:100%;
+}
+.header{
+position:absolute;
+top:10;
+left:10;
+z-index:2;
+width:100%;}
+.searchDiv{
+float:left;
+width:60%;
+height:auto;
+background-color:white;
+padding-left:12px;
+padding-top:12px;
+padding-bottom:12px;
+color:orange;
+border-radius:10px;
+border:1px solid red;
+}
+textarea:focus, input:focus{ outline: none; }
+.icon{
+float:left;
+width:10%;
+}
+::placeholder{
+color:orange;
+}
+.input input{
+z-index:1;
+float:left;
+width:80%;
+border:none;
+color:orange;
+}
+.shop_account{
+margin-top:12px;
+float:right;
+width:30%;
+}
+.shop{
+float:right;
+width:40%;
+}
+.shop img{
+width:50%;
+}
+.account{
+float:right;
+width:40%;
+}
+.account img{
+width:50%;
+}
+#slideshow{
+clear:both;
+width:100%;
+}
+#slideshow img{
+width:100%;
+}
+#slideshow .imgSlide{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index:1;
+}
+#taglistview{
+margin-bottom:12px;
+float:right;
+width:100%;
+}
+.tagtwo{
+text-align:center;
+width:86px;
+float:left;
+}
+.tagtwoname{
+width:100%;
+text-align:center;
+font-size:10px;
+}
+.tagtwo img{
+width:60%;
+}
 #listview{
-     background-color:yellow;
      width:100%;
      height:auto;
      }
 .item{
-     margin-left:5px;
-     margin-bottom:8px;
      text-align:center;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
      float:left;
-     width:48%;}
+     margin:1.5px;
+     width:49%;}
 .item img{
      margin-top:-30px;
      width:100%;
      height:auto;
      z-index:0}
-.title{
-  clear:both;
-  font-size:12px;
-  color:black;
+textarea{
+  background:transparent;
+  width:100%;
+  border:none;
   text-align:left;
 }
 .itemchild{
   width:100%;
-  text-align:center;
 }
 .price{
-  color:orange;
-  font-size:16px;
 }
 .love{
   
   margin-left:5px;
   float:left;
-  font-size:12px;
-  color:gray;
+  font-size:auto;
 }
 .rating{
   margin-right:5px;
   float:right;
-  font-size:12px;
-  color:gray;
+  font-size:auto;
 }
 .count{
-  clear:both;
   float:right;
   margin-right:10px;
-  font-size:12px;
+  font-size:auto;
   color:gray;
 }
 .location{
   clear:both;
   margin-right:10px;
   float:right;
-  font-size:12px;
+  font-size:auto;
   color:gray;
 }
 .noteleft{
@@ -64,7 +146,7 @@
   background-color:red;
   padding:3px;
   color:white;
-  font-size:10px;
+  font-size:12px;
   z-index:1;
 }
 .noteright{

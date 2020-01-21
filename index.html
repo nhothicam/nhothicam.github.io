@@ -9,13 +9,27 @@
      <script src="database.js"></script>
      <script src="js.js"></script>
   </head>
-  <body>
-    <button onclick="demo()">Demo</button>
+<body>
+     <div class="header">
+      <div class="searchDiv">
+         <div class="icon"><img src="search.png"></div>
+         <div class="input"><input type="search" placeholder="Tìm trong ..."></div>
+      </div>
+     <div class="shop_account">
+        <div class="shop"><img src="account.png"></div>
+        <div class="account"><img src="cart.png"></div>
+      </div>
+    </div>
+    <div id="slideshow"></div>
+    <div id="taglistview">
+      <div class="tagtwo"></div>
+    </div>
+    <a href=""><img class="imgBanner" src="https://cf.shopee.vn/file/6cef432bc0c1fb41cd74872d27ee3870"></a>
     <div id="listview">
       <!--<div class="item">
         <div class="noteleft">&#9734 yêu thích</div>
         <div class="noteright">&#9825 20%<br>GIẢM</div>
-        <img src="https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687">
+        <a href="#"><img src="https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687"></a>
         <div class="title"><p>Áo combor FOG nam cá tính</p></div>
         <div class="price">250.000-300.000</div>
         <div class="itemchild">
@@ -55,7 +69,8 @@
 </script>
     <script>
       (function(){
-
+slideshow();
+showTag2Listview();
 getAllProduct();
 })();
     </script>
