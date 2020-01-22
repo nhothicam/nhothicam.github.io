@@ -16,7 +16,6 @@ showTag("Freeship 50K","https://cf.shopee.vn/file/b32facc4bd5c5dacef483d803761be
 function showTag(name,link,srcImg){
 var div=document.createElement("div");
 div.className="tagtwo";
-//div.innerHTML="div";
 var img=document.createElement("img");
 img.src=srcImg;
 div.appendChild(img);
@@ -38,17 +37,14 @@ var slide3={"link":"link","srcimg":"https://cf.shopee.vn/file/713b65f78eea41b265
 var slide4={"link":"link","srcimg":"https://cf.shopee.vn/file/42bdd19bed4130fbae7c3bb9fc74514e_xhdpi"};
 var slide5={"link":"link","srcimg":"https://cf.shopee.vn/file/6ca527122d8b5827f375f04e60b52487_xhdpi"};
 var slide6={"link":"link","srcimg":"https://cf.shopee.vn/file/8677568cca4c10e94684dce4c5e94bbb_xhdpi"};
-var indexSlide=0;;
+var indexSlide=0;
 var arr=[slide1,slide2,slide3,slide4,slide5,slide6];
 var slideImg=document.createElement("img");
 slideImg.className="imgSlide";
-var demo=document.createElement("img");
 demo.src=arr[arr.length-1].srcimg;
 var slideDiv=document.getElementById("slideshow");
 slideImg.src=slide0;
-demo.style.opacity=0;
 slideDiv.appendChild(slideImg);
-slideDiv.appendChild(demo);
 setInterval(function(){
 if(indexSlide==0){
 slideImg.src=arr[indexSlide].srcimg;
