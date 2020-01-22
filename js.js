@@ -1,3 +1,48 @@
+function loadflashsale(){
+var item1={"link":"","imgSrc":"https://cf.shopee.vn/file/efa2adff0356a22a7444a73163969b0f_tn","salecount":"55","price":"9000","saled":"2926"};
+var item2={"link":"","imgSrc":"https://cf.shopee.vn/file/5da2f9540490da4a8bd6a70001b3ceae_tn","salecount":"25","price":"75000","saled":"676"};
+var item3={"link":"","imgSrc":"https://cf.shopee.vn/file/1b10da812a6867376e6f553227df7971_tn","salecount":"42","price":"29000","saled":"735"};
+var item4={"link":"","imgSrc":"https://cf.shopee.vn/file/00a5418122928af47ee1b779603013f6_tn","salecount":"85","price":"3000","saled":"4645"};
+var item5={"link":"","imgSrc":"https://cf.shopee.vn/file/6b3cfb17ffd1339de509e5b9afa75aac_tn","salecount":"21","price":"79000","saled":"9000"};
+var item6={"link":"","imgSrc":"https://cf.shopee.vn/file/2ae84ce236e2b94867497975ee8e6f5a_tn","salecount":"22","price":"39000","saled":"4002"};
+var arr=[item1,item2,item3,item4,item5,item6];
+var item7={"link":"","srcImg":"viewa.png","salecount":"","price":"","saled":""};
+for(i=0;i<5;i++){
+var link=arr[i].link;
+var imgSrc=arr[i].imgSrc;
+var salecount=arr[i].salecount+"%";
+var price=arr[i].price;
+var saled="Đã bán "+arr[i].saled+" cái";
+flashsale(link,imgSrc,salecount,price,saled);
+}
+flashsale("","","",">>Xem tất cả","");
+}
+function flashsale(link,imgSrc,salecount,price,saled){
+var flashsalecontent=document.createElement("div");
+flashsalecontent.className="flashsale-content";
+var div1=document.createElement("div");
+var flashsalesalecount=document.createElement("div");
+flashsalesalecount.className="flashsalesalecount";
+flashsalesalecount.innerHTML=salecount;
+div1.appendChild(flashsalesalecount);
+var img=document.createElement("img");
+img.src=imgSrc;
+div1.appendChild(img);
+flashsalecontent.appendChild(div1);
+var flashsaleprice=document.createElement("div");
+flashsaleprice.className="flashsaleprice";
+flashsaleprice.innerHTML=price;
+flashsalecontent.appendChild(flashsaleprice);
+var flashsalesale=document.createElement("div");
+flashsalesale.className="flashsalesale";
+flashsalesale.innerHTML=saled;
+flashsalecontent.appendChild(flashsalesale);
+var flashsale=document.getElementById("flashsale");
+flashsale.appendChild(flashsalecontent);
+}
+
+
+
 function detectmob(){
 if(window.innerWidth<=800&&window.innerHeight<=600){
 document.location="mobile/index.html";
@@ -9,8 +54,30 @@ function demo1(){
 alert("");
 }
 function showTag2Listview(){
-for(i=0;i<11;i++){
-showTag("Freeship 50K","https://cf.shopee.vn/file/b32facc4bd5c5dacef483d803761be9b_xhdpi","https://cf.shopee.vn/file/b32facc4bd5c5dacef483d803761be9b_xhdpi");
+var item1={"name":"Deal gần bạn","link":"","srcImg":"https://cf.shopee.vn/file/63772af8c0d05ed456c972adcf5080d6_xhdpi"};
+var item2={"name":"Freeship 50K","link":"","srcImg":"https://cf.shopee.vn/file/b32facc4bd5c5dacef483d803761be9b_xhdpi"};
+var item3={"name":"Shoppe Mall","link":"","srcImg":"https://cf.shopee.vn/file/cae5d99a5cb6b2231e420b7b5fb6cec5_xhdpi"};
+var item4={"name":"Shoppe Games","link":"","srcImg":"https://cf.shopee.vn/file/65bea09f53b52e4c24f273710e14dff5_xhdpi"};
+var item5={"name":"Siêu thị điện tử","link":"","srcImg":"https://cf.shopee.vn/file/d508ca8f4faae04ef1980810592d400f_xhdpi"};
+var item6={"name":"Vận may 1 đ","link":"","srcImg":"https://cf.shopee.vn/file/9c06085a8c01c95878902522e415bfbd_xhdpi"};
+var item7={"name":"Săn xu mỗi ngày","link":"","srcImg":"https://cf.shopee.vn/file/cbcfbe088c7c6894eccb67806f0016fc_xhdpi"};
+var item8={"name":"Mã giảm giá","link":"","srcImg":"https://cf.shopee.vn/file/2211c969451bb28708800222dafdeacc_xhdpi"};
+var item9={"name":"Ưu đãi đối tác","link":"","srcImg":"https://cf.shopee.vn/file/d1ded0a1469e629349081248db6c7d7e_xhdpi"};
+var item10={"name":"Nạp thẻ và dịch vụ","link":"","srcImg":"https://cf.shopee.vn/file/5586e1d2913db472c040b1b6d247fbd1_xhdpi"};
+var item11={"name":"Deal sốc từ 1K","link":"","srcImg":"https://cf.shopee.vn/file/02d180c9859049d7eb32e530fcbaec0a_xhdpi"};
+var item12={"name":"Hàng quốc tế","link":"","srcImg":"https://cf.shopee.vn/file/ae736dbc1b9aa95fa5594e5f40e49941_xhdpi"};
+var item13={"name":"NewFood-bữa ăn 0 đ","link":"","srcImg":"https://cf.shopee.vn/file/f30fbbbedf21e92690950cc58b126d9b_xhdpi"};
+var item14={"name":"Shoppe Mum's clup","link":"","srcImg":"https://cf.shopee.vn/file/1812313becdd164e35d2904b6a64b839_xhdpi"};
+var item15={"name":"Siêu thị Shoppe Mart","link":"","srcImg":"https://cf.shopee.vn/file/daf199579f117cd015284eb7f69b796d_xhdpi"};
+var item16={"name":"Miễn phí vận chuyển","link":"","srcImg":"https://cf.shopee.vn/file/398f0bc1aef54f81810de07074a3d4c3_xhdpi"};
+var item17={"name":"Calebrity club","link":"","srcImg":"https://cf.shopee.vn/file/bce38ceaacb9eb6df97a4ffb1a244c3d_xhdpi"};
+var arr=[item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17];
+for(i=0;i<arr.length;i++){
+var name=arr[i].name;
+var link=arr[i].link;
+var srcImg=arr[i].srcImg;
+showTag(name,link,srcImg);
+//showTag("Freeship 50K","https://cf.shopee.vn/file/b32facc4bd5c5dacef483d803761be9b_xhdpi","https://cf.shopee.vn/file/b32facc4bd5c5dacef483d803761be9b_xhdpi");
 }
 }
 function showTag(name,link,srcImg){

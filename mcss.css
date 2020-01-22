@@ -75,12 +75,12 @@ z-index:1;
 }
 #taglistview{
 margin-top:-2.92px;
-width:520px;
+width:760px;
 }
 .tagtwo{
 float:left;
 text-align:center;
-width:86px;
+width:84px;
 }
 .tagtwoname{
 width:100%;
@@ -95,6 +95,51 @@ margin-top:15px;
 a {
   color: black;
   text-decoration:none;
+}
+.flashsale-wraper{
+width:100%;
+overflow:auto;
+}
+#flashsale{
+width:1020px;
+height:auto;
+}
+.flashsale-content{
+position:relative;
+top:0;
+left:0;
+float:left;
+width:160px;
+height:auto;
+margin-right:8px;
+text-align:center;
+}
+.flashsalesalecount{
+position:absolute;
+top:0;
+right:0;
+width:auto;
+height:auto;
+background-color:yellow;
+color:tomato;
+padding:2px;
+}
+.flashsaleprice{
+color:red;
+font-size:16px;
+}
+.flashsalesale{
+padding:2px;
+width:80%;
+margin:0 auto; 
+color:white;
+font-size:12px;
+border-radius:10px;
+background-color:gray;
+}
+.flashsale-content img{
+width:100%;
+height:auto;
 }
 #listview{
      width:100%;
