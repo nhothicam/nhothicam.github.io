@@ -1,0 +1,170 @@
+body{
+zoom:1;
+}
+.imgBanner{
+width:100%;
+}
+.header{
+position:absolute;
+top:10px;
+left:10px;
+z-index:2;
+width:97.5%;}
+.searchDiv{
+float:left;
+width:60%;
+height:auto;
+background-color:white;
+padding-left:12px;
+padding-top:12px;
+padding-bottom:12px;
+color:orange;
+border-radius:10px;
+border:1px solid red;
+}
+textarea:focus, input:focus{ outline: none; }
+.icon{
+float:left;
+width:10%;
+}
+::placeholder{
+color:orange;
+}
+.input input{
+z-index:1;
+float:left;
+width:80%;
+border:none;
+color:orange;
+}
+.shop_account{
+margin-top:12px;
+margin-right:10px;
+float:right;
+width:30%;
+}
+.shop{
+float:right;
+width:40%;
+}
+.shop img{
+width:50%;
+}
+.account{
+float:right;
+width:40%;
+}
+.account img{
+width:50%;
+}
+#slideshow{
+position:absolute;
+top:0;
+left:8px;
+width:98%;
+clear:both;
+}
+#slideshow img{
+width:100%;
+}
+#slideshow .imgSlide{
+position:absolute;
+top:0;
+right:0;
+z-index:1;
+}
+#taglistview{
+margin-top:-2.92px;
+width:520px;
+}
+.tagtwo{
+float:left;
+text-align:center;
+width:86px;
+}
+.tagtwoname{
+width:100%;
+margin-bottom:15px;
+text-align:center;
+font-size:10px;
+}
+.tagtwo img{
+width:60%;
+margin-top:15px;
+}
+a {
+  color: black;
+  text-decoration:none;
+}
+#listview{
+     width:100%;
+     height:auto;
+     }
+.item{
+     text-align:center;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+     float:left;
+     margin:1.6px;
+     width:49%;}
+.item img{
+     margin-top:-30px;
+     width:100%;
+     height:auto;
+     z-index:0}
+textarea{
+  background:transparent;
+  width:100%;
+  border:none;
+  text-align:left;
+}
+.itemchild{
+  width:100%;
+}
+.price{
+}
+.love{
+  
+  margin-left:5px;
+  float:left;
+  font-size:auto;
+}
+.rating{
+  margin-right:5px;
+  float:right;
+  font-size:auto;
+}
+.count{
+  float:right;
+  margin-right:10px;
+  font-size:auto;
+  color:gray;
+}
+.location{
+  clear:both;
+  margin-right:10px;
+  float:right;
+  font-size:auto;
+  color:gray;
+}
+.noteleft{
+  position:relative;
+  float:left;
+  left:0px;
+  top:10px;
+  background-color:red;
+  padding:3px;
+  color:white;
+  font-size:12px;
+  z-index:1;
+}
+.noteright{
+  position:relative;
+  float:right;
+  right:0px;
+  top:10px;
+  padding:5px;
+  background-color:yellow;
+  z-index:1;
+}
+
+

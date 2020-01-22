@@ -4,74 +4,18 @@
    <meta name="viewport" content="witdth=devide-width,initial-scale=1" >
    <meta charset="utf-8">
    <title>Banhanghoa.github.io</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="css.css">
-     <script src="database.js"></script>
-     <script src="js.js"></script>
+     
   </head>
-<body>
-    <div class="header">
-      <div class="searchDiv">
-         <div class="icon"><img src="search.png"></div>
-         <div class="input"><input type="search" placeholder="Tìm trong ..."></div>
-      </div>
-     <div class="shop_account">
-        <div class="shop"><img src="account.png"></div>
-        <div class="account"><img src="cart.png"></div>
-      </div>
-    </div>
-    <div id="slideshow"></div>
-    <div style="overflow:auto;"><div id="taglistview">
-      <div class="tagtwo"></div>
-    </div></div>
-    <div style ="clear:both;">  </div><a href=""><img class="imgBanner" src="https://cf.shopee.vn/file/6cef432bc0c1fb41cd74872d27ee3870"></a>
-    </div>
-    <div id="listview">
-      <!--<div class="item">
-        <div class="noteleft">&#9734 yêu thích</div>
-        <div class="noteright">&#9825 20%<br>GIẢM</div>
-        <a href="#"><img src="https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687"></a>
-        <div class="title"><p>Áo combor FOG nam cá tính</p></div>
-        <div class="price">250.000-300.000</div>
-        <div class="itemchild">
-          <div class="love">&#9825</div>
-          <div class="rating">&#9734 &#9734 &#9734 &#9734 &#9734</div>
-          <div class="count">đã bán 39</div>
-        </div>
-        <p class="location">&#8627 Hà Nội</p>
-      </div>
-      -->
-    </div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCANBE3MU4FXSYH_G4hxuwK-4d-Kzut6pU",
-    authDomain: "shop-htcn.firebaseapp.com",
-    databaseURL: "https://shop-htcn.firebaseio.com",
-    projectId: "shop-htcn",
-    storageBucket: "shop-htcn.appspot.com",
-    messagingSenderId: "531910308873",
-    appId: "1:531910308873:web:947a2d2c9da9342097b4d8",
-    measurementId: "G-9326827HB2"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+  <body>
     <script>
       (function(){
-slideshow();
-showTag2Listview();
-getAllProduct();
+if(window.innerWidth<=800&&window.innerHeight<=600){
+//alert("mobile");
+document.location="mindex.html";
+}else{
+document.location="dindex.html";
+//alert("des");
+}
 })();
     </script>
   </body>
