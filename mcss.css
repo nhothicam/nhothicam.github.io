@@ -1,5 +1,9 @@
-body{
-zoom:1;
+.body{
+overflow-x:hidden;
+position:absolute;
+top:-8px;
+left:-8px;
+width:102%;
 }
 .imgBanner{
 width:100%;
@@ -9,7 +13,7 @@ position:absolute;
 top:10px;
 left:15px;
 z-index:2;
-width:97%;}
+width:95%;}
 .searchDiv{
 float:left;
 width:60%;
@@ -59,13 +63,13 @@ width:50%;
 }
 #slideshow{
 position:absolute;
-top:0;
-left:8px;
-width:98%;
+top:0px;
+left:-8px;
+width:102%;
 clear:both;
 }
 #slideshow img{
-width:100%;
+width:102%;
 }
 #slideshow .imgSlide{
 position:absolute;

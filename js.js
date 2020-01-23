@@ -1,19 +1,3 @@
-function moverighttoleft(element){
-element.style.top=0+"px";
-element.style.left=pos+"px";
-var width=window.innerWidth;
-var pos=width;
-var id=setInterval(function(){
-if(pos<=0){
-clearInterval(id);
-element.style.left="0px";
-}else{
-element.style.top=0+"px";
-element.style.left=pos+"px";
-pos-=20;
-}
-},2);
-}
 function loadflashsale(){
 var item1={"link":"","imgSrc":"https://cf.shopee.vn/file/efa2adff0356a22a7444a73163969b0f_tn","salecount":"55","price":"9000","saled":"2926"};
 var item2={"link":"","imgSrc":"https://cf.shopee.vn/file/5da2f9540490da4a8bd6a70001b3ceae_tn","salecount":"25","price":"75000","saled":"676"};
@@ -141,6 +125,7 @@ slideDiv.appendChild(slideImg);
 
 if(indexSlide>4){indexSlide=0;}
 moverighttoleft(slideImg);
+fadein(slideImg);
 },5000);
 }
 
